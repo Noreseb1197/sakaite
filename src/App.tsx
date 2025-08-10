@@ -4,7 +4,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import {motion, AnimatePresence, stagger} from "framer-motion";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 // Auto-import Logo, Hero, Gallery, Room Images
@@ -72,7 +72,9 @@ const importGallery = () => {
 };
 
 function Navbar() {
+
   const [logoImg, setLogoImg] = useState<{ img: string } | null>(null);
+
   useEffect(() => {
     const images = LogoSrc();
     if (images.length > 0) {
@@ -361,7 +363,7 @@ function Gallery() {
           className="grid gap-6 sm:grid-cols-2 md:grid-cols-3"
           initial="hidden"
           animate="visible"
-          variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+          variants={{ visible: { transition: { delayChildren: stagger(0.08) } } }}
         >
           {galleryItems.map((it) => (
             <motion.figure
@@ -643,7 +645,14 @@ function Location() {
           (position) => {
             const { latitude, longitude } = position.coords;
             const url = `https://www.google.com/maps/dir/${latitude},${longitude}/Sakaite+Self+Catering+Guesthouse,+Kamanjab,+Namibia`;
-            window.open(url, "_blank");
+            // Create a temporary anchor element and trigger a click
+            const link = document.createElement('a');
+            link.href = url;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
           },
           () => {
             alert(

@@ -12,19 +12,4 @@ export default defineConfig({
             '@': resolve(__dirname, './src'),
         },
     },
-    build: {
-      rollupOptions:{
-          input: {
-              main: resolve(__dirname, 'index.html'),
-              admin: resolve(__dirname, 'admin/index.html')
-          },
-          output: {
-              // Ensures assets are placed in the correct subdirectory
-              entryFileNames: (chunkInfo) => {
-                  return chunkInfo.name === 'admin' ? `admin/[name]-[hash].js` : '[name]-[hash].js';
-              }
-          }
-
-      }
-    }
 })
