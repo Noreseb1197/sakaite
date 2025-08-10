@@ -691,7 +691,7 @@ function Location() {
         <div className="rounded-xl overflow-hidden shadow border border-slate-800">
           <iframe
             title="Sakaite Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.473461460395!2d14.821217515!3d-19.638205423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1b9c9f4d1d6e8e81%3A0x1b4c3e8a7c2e3c0!2sSakaite%20Self%20Catering%20Guesthouse!5e0!3m2!1sen!2sna!4v1625478901234!5m2!1sen!2sna"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1441.208669136674!2d14.844756292547327!3d-19.626815590016545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1b8e63ea05231717%3A0x2bcb13e84753c1bf!2sSakaite%20Self%20Catering%20Guesthouse!5e0!3m2!1sen!2sna!4v1754864409678!5m2!1sen!2sna"
             width="100%"
             height={350}
             style={{ border: 0 }}
