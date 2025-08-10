@@ -33,7 +33,7 @@ A modern, responsive website for Sakaite Self-catering Guesthouse located in Kam
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/TrickyNoob2020/sakaite-frontend.git
+   git clone https://github.com/TrickyNoob2020/sakaite_frontend.git
    cd sakaite-frontend
    ```
 
