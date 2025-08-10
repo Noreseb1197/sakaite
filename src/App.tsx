@@ -79,7 +79,7 @@ function Navbar() {
       setLogoImg(images[0]);
     }
   }, []);
-  
+
   const [open, setOpen] = useState(false);
   const links = [
     { id: "hero", label: "Home" },
@@ -249,7 +249,7 @@ function Hero() {
               <button
                 onClick={() =>
                   document
-                    .getElementById("gallery")
+                    .getElementById("room-gallery")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
                 className="inline-flex items-center gap-2 bg-teal-400 text-slate-900 px-6 py-3 rounded-full shadow-lg font-bold hover:bg-teal-300 transition-colors duration-300 transform hover:scale-105"
@@ -687,6 +687,7 @@ function Location() {
             height={350}
             style={{ border: 0 }}
             allowFullScreen
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
